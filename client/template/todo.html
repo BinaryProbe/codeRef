@@ -1,0 +1,25 @@
+<template name="todo">
+  <div class="post" style='{{#if checked}}background-color:#C7EDE0{{/if}}'>
+    <div class="post-content">
+				<h3>
+				<a href="#" id="{{#if ownUser}}checked{{/if}}" class="upvote btn"><strong>{{#if checked}}V{{else}}?{{/if}}</strong></a>
+      	<span class="todo" id="todo-head">{{author}} said :</span>
+				<span id="todo-content">{{contents}}</span>
+				<span class="date">  on {{normalizeDate submitted "short"}}</span>
+				<br>
+				<span> status -  </span>
+				{{#if checked}}
+					<span id="status-resolved"> Resolved</span>
+				{{else}}
+					<span id="status-todo"> Todo </span>
+				{{/if}}
+					
+				</h3>
+    </div>
+			{{#if ownUser}}
+      	<a id="delete" class= "discuss btn btn-default"><strong>&times;</strong></a>
+			{{/if}}
+  </div>
+</template>
+
+

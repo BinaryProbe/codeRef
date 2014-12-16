@@ -1,0 +1,12 @@
+<template name="postPage">
+  {{> postItem}}
+	<ul class="comments">
+	{{#each todoList}}
+		{{> todo}}
+	{{/each}}
+	</ul>
+	{{#if currentUser}}
+		{{> postContents}}
+	{{/if}}
+</template>
+

@@ -1,0 +1,34 @@
+<template name="postSubmit">
+  <form class="main form">
+    <div class="form-group">
+      <label class="control-label" for="category">Category</label>
+      <div class="controls">
+				<select name="category" id="category" class="form-control"  >
+				{{#each categories}}
+					{{>category}}
+				{{/each}}
+				</select>
+      </div>
+		</div>
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="Name your reference" class="form-control"/>
+      </div>
+    </div>
+		<div class="form-group">
+      <label class="control-label" for="url">URL</label>
+      <div class="controls">
+          <input name="url" id="url" type="text" value="" placeholder="Reference URL" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="comment">Todo /  Further question</label>
+      <div class="controls">
+				<textarea name="comment" id="comment" class="form-control" ></textarea>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  </form>
+</template>
+

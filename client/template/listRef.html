@@ -1,0 +1,15 @@
+<template name="postsList">
+	{{#if hasCategory}}
+  <form class="main form" > 
+      <label class="category-label" for="category" align="center">  > Current Category : {{category}}</label>
+	</form>
+	{{/if}}
+  <div class="posts">
+    {{#each posts}}
+			{{#if isCategoryMatch}}
+      	{{> postItem}}
+			{{/if}}
+    {{/each}}
+  </div>
+</template>
+
