@@ -1,5 +1,5 @@
 Template.category.helpers({
-	isCurrentCategory : function() { 
+	isCurrentCategory : function() {
 		var categoryName = Session.get("currentCategory");
 		if( categoryName == null ) 
 			categoryName = "None";
